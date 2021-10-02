@@ -1,0 +1,256 @@
+/* layout */
+
+#site-header{
+    padding: 0;
+    margin: 0;
+    height: 240px;
+}
+
+#site-title{
+    margin: 35px 0 0 0;
+    /*padding: 0 0 0 100px;*/
+    /*position: relative;*/
+    /*left: -60px;*/
+}
+
+#content-body{
+    position: relative;
+    top: -80px;
+}
+
+
+/* content-main */
+#content-main{
+    padding: 0 15px 0 15px;
+    margin: 0;
+}
+
+.detail{
+    padding: 30px 0 0 0;
+}
+
+.detail header{
+    margin: 0 0 30px 0;
+}
+
+.detail-content{
+    padding: 0 30px 0 30px;
+}
+
+.post{
+    padding: 10px 15px;
+    margin: 0 0 20px 0;
+}
+
+.post-title{
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.post-info{
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.post-time, .post-tags, .post-visVolume{
+    padding-right: 8px;
+}
+
+.post-tags span{
+    padding: 0 2px;
+}
+
+.post-excerpt{
+    padding: 0 25px;
+    margin: 0 0 20px 0;
+}
+
+.read-more{
+    padding: 8px 0;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.read-more a{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 8px 5px;
+}
+
+
+.paging-bar{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.paging-bar ul{
+    margin: 0;
+    padding: 0;
+}
+
+/* content-aside */
+#content-aside{
+    padding: 0 15px 0 15px;
+    margin: 0;
+}
+
+#content-aside > div{
+    padding: 15px 20px;
+    margin: 0 0 20px 0;
+}
+
+#content-aside > div > h3{
+    margin: 0 30px 15px 0;
+    padding: 0 0 15px 0;
+    border-bottom: 2px solid rgba(60, 60, 60, 0.7);
+}
+
+#catalogue li{
+    line-height: 200%;
+}
+
+#archives ul, #tag-cloud ul{
+    padding: 0;
+    margin: 0;
+}
+
+#about div{
+    margin: 20px 35px 0 35px;
+    border-top: 2px solid rgba(60, 60, 60, 0.7);
+}
+
+#my-name{
+    padding: 15px 0 0 0;
+    margin: 0;
+}
+
+#my-intro{
+    padding: 8px 0;
+    margin: 0;
+}
+
+footer{
+    padding: 0 0 20px 0;
+    /*margin: 20px 0 0 0;*/
+    margin: 0;
+}
+
+.copyright{
+    padding: 5px 0;
+    margin: 0;
+}
+
+/* color */
+body{
+    background-color: rgb(237, 237, 237);
+}
+
+#site-header{
+    /*border: 1px solid black;*/
+    background-color: rgb(60, 60, 60);
+}
+
+#site-title, #site-title a{
+    color: #eee;
+    font-size: 190%;
+    letter-spacing: 1px;
+}
+
+#content-body, .post a, .post-info a, #content-aside a{
+    color: #444;
+}
+
+#content-body a, #site-header a{
+    text-decoration: none;
+}
+
+.post header, .detail header{
+    text-align: center;
+}
+
+.post{
+    background-color: #eee;
+    /*border-radius: 8px;*/
+    box-shadow: 3px 3px 5px #aaa;
+}
+
+.detail{
+    background-color: #eee;
+    box-shadow: 1px 1px 5px #aaa;
+}
+
+.post-excerpt{
+    font-size: 100%;
+    letter-spacing: 1px;
+    text-indent: 50px;
+}
+
+.read-more{
+
+    font-size: 150%;
+}
+
+.paging-bar li{
+    list-style-type: none;
+    display: inline;
+    padding-right: 15px;
+}
+
+.paging-bar li a{
+    font-size: 110%;
+    color: black;
+}
+
+.paging-bar a:hover{
+    color: white;
+}
+
+.current-page{
+    border-bottom: 1px solid black;
+    font-size: 150% !important;
+}
+
+#content-aside > div{
+    background-color: #eee;
+    /*border-radius: 5px;*/
+    box-shadow: 1px 1px 5px #aaa;
+}
+
+#content-aside li{
+    list-style-type: none;
+}
+
+#catalogue li{
+    list-style-type: disc;
+}
+
+#archives li{
+    margin: 0 0 5px 0;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+
+#tag-cloud li{
+    display: inline-block;
+    border: 1px solid black;
+    padding: 3px 8px;
+    margin: 0 5px 5px 0;
+    border-radius: 8px;
+}
+
+#about{
+    text-align: center;
+}
+
+#about img{
+    border-radius: 100px;
+    width: 128px;
+    height: 128px;
+}
+
+.copyright{
+    border-top: 1px solid rgba(43, 43, 43, 0.5);
+    text-align: center;
+    /*color: #444;*/
+    letter-spacing: 1px;
+}

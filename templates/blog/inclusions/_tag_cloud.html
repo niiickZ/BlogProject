@@ -1,0 +1,10 @@
+<div id="tag-cloud">
+    <h3>标签</h3>
+    <ul>
+        {% for tag in tag_list %}
+        <li><a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }} ({{ tag.num }})</a></li>
+        {% empty %}
+         <li>标签未创建</li>
+        {% endfor %}
+    </ul>
+</div>
