@@ -1,0 +1,10 @@
+asgiref==3.4.1
+Django==3.2.7
+django-pure-pagination==0.3.0
+importlib-metadata==4.8.1
+Markdown==3.3.4
+python-markdown-math==0.8
+pytz==2021.1
+sqlparse==0.4.2
+typing-extensions==3.10.0.2
+zipp==3.5.0
