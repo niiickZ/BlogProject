@@ -114,6 +114,22 @@
     margin: 0;
 }
 
+#search-input, #search-submit{
+    height: 40px;
+}
+
+#search-input{
+    width: 200px;
+    margin-right: 5px;
+    padding-left: 5px;
+    font-size: 110%;
+    border-width: 1px;
+}
+
+#search-input:focus{
+    outline: none;
+}
+
 #about div{
     margin: 20px 35px 0 35px;
     border-top: 2px solid rgba(60, 60, 60, 0.7);
@@ -228,6 +244,10 @@ body{
     margin: 0 0 5px 0;
     line-height: 150%;
     letter-spacing: 1px;
+}
+
+#search-input{
+    background-color: rgb(245,245,245);
 }
 
 #tag-cloud li{

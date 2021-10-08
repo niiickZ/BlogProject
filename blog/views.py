@@ -1,6 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView
 from pure_pagination import PaginationMixin
+from django.contrib import messages
+from django.db.models import Q
 
 from .models import Post, Tag
 import markdown
@@ -15,7 +17,7 @@ class IndexView(PaginationMixin, ListView):
     model = Post
     template_name = 'blog/index.html'
     context_object_name = 'post_list'
-    paginate_by = 1
+    paginate_by = 10
 
 def detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -49,3 +51,20 @@ def tags(request, pk):
     t = get_object_or_404(Tag, pk=pk)
     post_list = Post.objects.filter(tags=t).order_by('-created_time')
     return render(request, 'blog/index.html', context={'post_list': post_list})
+
+def search(request):
+    q = request.GET.get('q')
+
+    # 若查询为空则重定向至首页
+    # if not q:
+    #     messages.warning(request, '请输入搜索关键词')
+    #     return redirect('blog:index')
+
+    post_list = Post.objects.filter(Q(title__icontains=q) | Q(body__icontains=q))
+
+    # 若未查询到则提示并重定向至首页
+    if post_list.count() == 0:
+        messages.info(request, '未检索到相关文章')
+        return redirect('blog:index')
+
+    return render(request, 'blog/index.html', {'post_list': post_list})
