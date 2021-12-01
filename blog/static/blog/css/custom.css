@@ -109,7 +109,7 @@
     line-height: 200%;
 }
 
-#archives ul, #tag-cloud ul{
+#archives ul, #tag-cloud ul, #category ul{
     padding: 0;
     margin: 0;
 }
@@ -240,7 +240,7 @@ body{
     list-style-type: disc;
 }
 
-#archives li{
+#archives li, #category li{
     margin: 0 0 5px 0;
     line-height: 150%;
     letter-spacing: 1px;

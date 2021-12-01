@@ -1,5 +1,5 @@
 from django import template
-from ..models import Post, Tag
+from ..models import Post, Tag, Category
 from django.db.models.aggregates import Count
 
 register = template.Library()
@@ -7,6 +7,11 @@ register = template.Library()
 @register.inclusion_tag('blog/inclusions/_archives.html')
 def showArchives():
     return {'date_list': Post.objects.dates('created_time', 'month', order='DESC')}
+
+@register.inclusion_tag('blog/inclusions/_category.html')
+def showCategories():
+    cate_list = Category.objects.annotate(num=Count('post'))
+    return {'cate_list': cate_list}
 
 @register.inclusion_tag('blog/inclusions/_tag_cloud.html')
 def showTags():

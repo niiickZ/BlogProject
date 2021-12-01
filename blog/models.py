@@ -6,6 +6,12 @@ from django.urls import reverse
 import markdown
 from mdx_math import MathExtension
 
+class Category(models.Model):
+    def __str__(self):
+        return self.name
+
+    name = models.CharField(max_length=100)
+
 class Tag(models.Model):
     def __str__(self):
         return self.name
@@ -44,6 +50,8 @@ class Post(models.Model):
     modified_time = models.DateTimeField()
 
     excerpt = models.CharField(max_length=200, blank=True)
+
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     tags = models.ManyToManyField(Tag, blank=True)
 

@@ -1,0 +1,10 @@
+<div id="category">
+    <h3>分类</h3>
+    <ul>
+        {% for cate in cate_list %}
+            <li><a href="{% url 'blog:category' cate.pk %}">{{ cate.name }} ({{ cate.num }})</a></li>
+        {% empty %}
+            <li>标签未创建</li>
+        {% endfor %}
+    </ul>
+</div>

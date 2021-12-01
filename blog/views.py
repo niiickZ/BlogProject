@@ -4,7 +4,7 @@ from pure_pagination import PaginationMixin
 from django.contrib import messages
 from django.db.models import Q
 
-from .models import Post, Tag
+from .models import Post, Tag, Category
 import markdown
 from mdx_math import MathExtension
 import re
@@ -45,6 +45,11 @@ def archive(request, year, month):
         created_time__year=year,
         created_time__month=month
     ).order_by('-created_time')
+    return render(request, 'blog/index.html', context={'post_list': post_list})
+
+def categories(request, pk):
+    c = get_object_or_404(Category, pk=pk)
+    post_list = Post.objects.filter(category=c).order_by('-created_time')
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 def tags(request, pk):
