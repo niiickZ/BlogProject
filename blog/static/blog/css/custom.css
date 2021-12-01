@@ -8,16 +8,12 @@
 
 #site-title{
     margin: 35px 0 0 0;
-    /*padding: 0 0 0 100px;*/
-    /*position: relative;*/
-    /*left: -60px;*/
 }
 
-#content-body{
+#content{
     position: relative;
     top: -80px;
 }
-
 
 /* content-main */
 #content-main{
@@ -147,7 +143,6 @@
 
 footer{
     padding: 0 0 20px 0;
-    /*margin: 20px 0 0 0;*/
     margin: 0;
 }
 
@@ -162,21 +157,27 @@ body{
 }
 
 #site-header{
-    /*border: 1px solid black;*/
-    background-color: rgb(60, 60, 60);
+    background-color: rgba(120, 154, 150, 0.4);
+    /*background: transparent;*/
 }
 
 #site-title, #site-title a{
-    color: #eee;
+    color: #e5e5e5;
     font-size: 190%;
     letter-spacing: 1px;
 }
 
-#content-body, .post a, .post-info a, #content-aside a{
+#home{
+    background-image: url('../img/bg.png');
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+#home, .post a, .post-info a, #content-aside a{
     color: #444;
 }
 
-#content-body a, #site-header a{
+#home a, #site-header a{
     text-decoration: none;
 }
 
@@ -184,14 +185,15 @@ body{
     text-align: center;
 }
 
+.post, .detail, #content-aside > div{
+    background-color: rgba(238, 238, 238, 0.8);
+}
+
 .post{
-    background-color: #eee;
-    /*border-radius: 8px;*/
     box-shadow: 3px 3px 5px #aaa;
 }
 
 .detail{
-    background-color: #eee;
     box-shadow: 1px 1px 5px #aaa;
 }
 
@@ -209,11 +211,11 @@ body{
 .paging-bar li{
     list-style-type: none;
     display: inline;
-    padding-right: 15px;
+    padding-right: 20px;
 }
 
 .paging-bar li a{
-    font-size: 110%;
+    font-size: 130%;
     color: black;
 }
 
@@ -223,12 +225,10 @@ body{
 
 .current-page{
     border-bottom: 1px solid black;
-    font-size: 150% !important;
+    font-size: 170% !important;
 }
 
 #content-aside > div{
-    background-color: #eee;
-    /*border-radius: 5px;*/
     box-shadow: 1px 1px 5px #aaa;
 }
 
@@ -269,8 +269,8 @@ body{
 }
 
 .copyright{
-    border-top: 1px solid rgba(43, 43, 43, 0.5);
+    border-top: 1px solid rgba(43, 43, 43, 0.8);
     text-align: center;
-    /*color: #444;*/
     letter-spacing: 1px;
+    color: black;
 }
