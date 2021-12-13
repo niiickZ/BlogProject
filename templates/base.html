@@ -36,63 +36,59 @@
     </script>
 {% endif %}
 
-<div id="home">
-    <header id="site-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-12">
-                    <h1 id="site-title"><a href="#">RennsのBlog</a></h1>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="container" id="content">
+<header id="site-header">
+    <div class="container">
         <div class="row">
-            <main class="col-md-9" id="content-main">
-                {% block main %}
-                {% endblock main %}
-            </main>
-            <aside class="col-md-3" id="content-aside">
-                <div id="about">
-                    <img src="{% static 'blog/img/avatar.png' %}" id="avatar">
-                    <div>
-                        <h3 id="my-name">niiick</h3>
-                        <p id="my-intro">ACMer, OIer, 菜鸡er</p>
-                    </div>
-                </div>
-
-                {% block toc %}
-                {% endblock toc %}
-
-                {% showArchives %}
-
-                <div id="search-box">
-                    <h3>搜索</h3>
-                    <form id="search-form" method="get" action="{% url 'blog:search' %}">
-                        <input type="search" id="search-input" name="q" required maxlength="40">
-                        <input type="submit" id="search-submit" value="搜索">
-                    </form>
-                </div>
-
-                {% showCategories %}
-                {% showTags %}
-            </aside>
+            <div class="col-md-12 col-12">
+                <h1 id="site-title"><a href="#">RennsのBlog</a></h1>
+            </div>
         </div>
     </div>
+</header>
 
-    <footer id="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-12">
-                    <p class="copyright">&copy 2021 by Renns</p>
+<div class="container" id="content">
+    <div class="row">
+        <main class="col-md-9" id="content-main">
+            {% block main %}
+            {% endblock main %}
+        </main>
+        <aside class="col-md-3" id="content-aside">
+            <div id="about">
+                <img src="{% static 'blog/img/avatar.png' %}" id="avatar">
+                <div>
+                    <h3 id="my-name">niiick</h3>
+                    <p id="my-intro">ACMer, OIer, 菜鸡er</p>
                 </div>
             </div>
-        </div>
-    </footer>
+
+            {% block toc %}
+            {% endblock toc %}
+
+            {% showArchives %}
+
+            <div id="search-box">
+                <h3>搜索</h3>
+                <form id="search-form" method="get" action="{% url 'blog:search' %}">
+                    <input type="search" id="search-input" name="q" required maxlength="40">
+                    <input type="submit" id="search-submit" value="搜索">
+                </form>
+            </div>
+
+            {% showCategories %}
+            {% showTags %}
+        </aside>
+    </div>
 </div>
 
-
+<footer id="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-12">
+                <p class="copyright">&copy 2021 by Renns</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="{% static 'blog/js/script.js' %}"></script>
 

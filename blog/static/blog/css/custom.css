@@ -33,6 +33,12 @@
     padding: 0 30px 0 30px;
 }
 
+.detail-content{
+    line-height: 180%;
+    letter-spacing: 1px;
+    font-size: 105%;
+}
+
 .post{
     padding: 10px 15px;
     margin: 0 0 20px 0;
@@ -167,17 +173,17 @@ body{
     letter-spacing: 1px;
 }
 
-#home{
+body{
     background-image: url('../img/bg.png');
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
 }
 
-#home, .post a, .post-info a, #content-aside a{
-    color: #444;
+#content, .post a, .post-info a, #content-aside a, #site-footer{
+    color: #111;
 }
 
-#home a, #site-header a{
+#content a, #site-header a{
     text-decoration: none;
 }
 
