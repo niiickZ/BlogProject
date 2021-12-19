@@ -20,6 +20,10 @@ class IndexView(PaginationMixin, ListView):
     paginate_by = 10
 
 def detail(request, pk):
+    def change_formula(matched):
+        formula = matched.group(0)
+        return '\n<p>' + formula + '</p>\n'
+
     post = get_object_or_404(Post, pk=pk)
 
     # 增加文章阅读量
@@ -32,6 +36,7 @@ def detail(request, pk):
         'markdown.extensions.toc',
         MathExtension(enable_dollar_delimiter=True)
     ])
+    # post.body = re.sub(r'\$\$(.+?)\$\$', change_formula, post.body)
     post.body = md.convert(post.body)
 
     # 文章摘要
