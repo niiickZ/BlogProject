@@ -19,6 +19,9 @@ class IndexView(PaginationMixin, ListView):
     context_object_name = 'post_list'
     paginate_by = 10
 
+    def get_queryset(self):
+        return super().get_queryset().order_by('-created_time')
+
 def detail(request, pk):
     def change_formula(matched):
         formula = matched.group(0)
