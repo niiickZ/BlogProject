@@ -34,6 +34,7 @@ def detail(request, pk):
         'markdown.extensions.extra',
         'markdown.extensions.codehilite',
         'markdown.extensions.toc',
+        'markdown.extensions.nl2br',
         MathExtension(enable_dollar_delimiter=True)
     ])
     # post.body = re.sub(r'\$\$(.+?)\$\$', change_formula, post.body)

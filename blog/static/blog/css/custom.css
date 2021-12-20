@@ -22,7 +22,7 @@
 }
 
 .detail{
-    padding: 30px 0 0 0;
+    padding: 30px 0;
 }
 
 .detail header{
@@ -34,9 +34,37 @@
 }
 
 .detail-content{
-    line-height: 180%;
+    line-height: 30px;
     letter-spacing: 1px;
     font-size: 105%;
+}
+
+.detail .post-title{
+    font-weight: bold;
+}
+
+.detail-content h1, .detail-content h2, .detail-content h3, .detail-content h4, .detail-content h5{
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.detail-content p{
+    margin: 0;
+}
+
+.detail-content p img{
+    display: block;
+    margin: 10px auto;
+}
+
+.detail-content pre{
+    margin: 10px auto;
+}
+
+.detail blockquote{
+    font: 95% normal;
+    margin: 10px 0 10px 30px;
+    padding: 8px 15px;
 }
 
 .post{
@@ -160,6 +188,7 @@ footer{
 /* color */
 body{
     background-color: rgb(237, 237, 237);
+    font-family: verdana,Helvetica£¬Arial, sans-serif ;
 }
 
 #site-header{
@@ -169,7 +198,7 @@ body{
 
 #site-title, #site-title a{
     color: #e5e5e5;
-    font-size: 190%;
+    font-size: 205%;
     letter-spacing: 1px;
 }
 
@@ -201,6 +230,11 @@ body{
 
 .detail{
     box-shadow: 1px 1px 5px #aaa;
+}
+
+.detail blockquote{
+    border-left: 5px solid rgba(160, 160, 160, 0.6);
+    background-color: rgba(220, 220, 220, 0.6);
 }
 
 .post-excerpt{
