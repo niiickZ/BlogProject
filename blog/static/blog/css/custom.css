@@ -7,7 +7,7 @@
 }
 
 #site-title{
-    margin: 35px 0 0 0;
+    margin: 25px 0 0 0;
 }
 
 #content{
@@ -44,6 +44,7 @@
 }
 
 .detail-content h1, .detail-content h2, .detail-content h3, .detail-content h4, .detail-content h5{
+    font-family: "Microsoft Yahei", Serif;
     font-weight: bold;
     margin: 20px 0;
 }
@@ -75,7 +76,8 @@
 
 .post-title{
     padding: 0;
-    margin: 0 0 10px 0;
+    margin: 7px 0 10px 0;
+    font-family: "Microsoft Yahei", Serif;
 }
 
 .post-info{
@@ -134,6 +136,7 @@
     margin: 0 30px 15px 0;
     padding: 0 0 15px 0;
     border-bottom: 2px solid rgba(60, 60, 60, 0.7);
+    font-family: "Microsoft Yahei", Serif;
 }
 
 #catalogue li{
@@ -188,8 +191,10 @@ footer{
 
 /* color */
 body{
-    background-color: rgb(237, 237, 237);
-    font-family: verdana,Helvetica��Arial, sans-serif ;
+    background-image: url('../img/bg.png');
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
 #site-header{
@@ -199,14 +204,10 @@ body{
 
 #site-title, #site-title a{
     color: #e5e5e5;
-    font-size: 205%;
+    font-size: 230%;
+    font-weight: bold;
     letter-spacing: 1px;
-}
-
-body{
-    background-image: url('../img/bg.png');
-    background-attachment: fixed;
-    background-size: cover;
+    font-family: "Segoe Script", cursive, sans-serif, Serif;
 }
 
 #content, .post a, .post-info a, #content-aside a, #site-footer{
