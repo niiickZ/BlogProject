@@ -90,7 +90,19 @@
 }
 
 .post-tags span{
-    padding: 0 2px;
+    padding: 2px 4px;
+    margin-right: 3px;
+    border: 1px solid rgba(180, 180, 180, 0.6);
+    border-radius: 8px;
+    background-color: rgba(245, 245, 245, 0.6);
+}
+
+.post-tags span a:hover{
+    /*color: rgb(100, 100, 100);*/
+}
+
+.post-tags span:hover{
+    background-color: rgba(230, 230, 230, 0.6);
 }
 
 .post-excerpt{
