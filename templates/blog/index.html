@@ -44,9 +44,9 @@
         <div class="paging-bar">
             <ul>
                 {% if page_obj.has_previous %}
-                    <li><a href="?{{ page_obj.previous_page_number.querystring }}">&lsaquo;&lsaquo;</a></li>
+                    <li><a href="?{{ page_obj.previous_page_number.querystring }}">&lsaquo;&lsaquo;Pre</a></li>
                 {% else %}
-                      <li><span class="disabled">&lsaquo;&lsaquo;</span></li>
+                      <li><span class="disabled">&lsaquo;&lsaquo;Pre</span></li>
                 {% endif %}
 
                 {% for page in page_obj.pages %}
@@ -60,9 +60,9 @@
                 {% endfor %}
 
                 {% if page_obj.has_next %}
-                    <li><a href="?{{ page_obj.next_page_number.querystring }}">&rsaquo;&rsaquo;</a></li>
+                    <li><a href="?{{ page_obj.next_page_number.querystring }}">Nxt&rsaquo;&rsaquo;</a></li>
                 {% else %}
-                    <li><span class="disabled"> &rsaquo;&rsaquo;</span></li>
+                    <li><span class="disabled">Nxt&rsaquo;&rsaquo;</span></li>
                 {% endif %}
             </ul>
         </div>
