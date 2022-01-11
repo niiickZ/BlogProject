@@ -1,0 +1,10 @@
+<div id="friends_link">
+    <h3>友链</h3>
+    <ul>
+        {% for link in link_list %}
+            <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+        {% empty %}
+            <li>咦？什么都没有呢</li>
+        {% endfor %}
+    </ul>
+</div>

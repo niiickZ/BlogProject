@@ -77,9 +77,10 @@
         <aside class="col-md-3" id="content-aside">
             <div id="about">
                 <img src="{% static 'blog/img/avatar.png' %}" id="avatar">
+                <hr>
                 <div>
                     <h3 id="my-name">Renns</h3>
-                    <p id="my-intro">ACMer, OIer, majored in CS at HITsz</p><br>
+                    <p id="my-intro">ACMer, OIer <br> majored in CS at HITsz</p><br>
                 </div>
             </div>
 
@@ -98,6 +99,7 @@
 
             {% showCategories %}
             {% showTags %}
+            {% showFriendlinks %}
         </aside>
     </div>
 </div>

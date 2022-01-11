@@ -137,6 +137,7 @@
 #content-aside{
     padding: 0 15px 0 15px;
     margin: 0;
+    font-size: 105%;
 }
 
 #content-aside > div{
@@ -155,7 +156,7 @@
     line-height: 200%;
 }
 
-#archives ul, #tag-cloud ul, #category ul{
+#archives ul, #tag-cloud ul, #category ul, #friends_link ul{
     padding: 0;
     margin: 0;
 }
@@ -170,6 +171,7 @@
     padding-left: 5px;
     font-size: 110%;
     border-width: 1px;
+    max-width: 70%;
 }
 
 #search-input:focus{
@@ -177,17 +179,26 @@
 }
 
 #about div{
-    margin: 20px 35px 0 35px;
-    border-top: 2px solid rgba(60, 60, 60, 0.7);
+    margin: 0 auto;
+}
+
+#about hr{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 2px;
+    color: rgb(0, 0, 0);
 }
 
 #my-name{
-    padding: 15px 0 0 0;
+    padding: 0;
     margin: 0;
+    font-size: 220%;
+    font-family: "Segoe Script", cursive, sans-serif, Serif;
 }
 
 #my-intro{
-    padding: 8px 0;
+    padding: 8px 0 0 0;
     margin: 0;
 }
 
@@ -268,7 +279,7 @@ body{
     padding-right: 20px;
 }
 
-.paging-bar li a, .paging-bar li span{
+.paging-bar li a{
     font-size: 130%;
     color: black;
 }
@@ -294,7 +305,7 @@ body{
     list-style-type: disc;
 }
 
-#archives li, #category li{
+#archives li, #category li, #friends_link li{
     margin: 0 0 5px 0;
     line-height: 150%;
     letter-spacing: 1px;

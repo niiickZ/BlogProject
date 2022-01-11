@@ -6,6 +6,13 @@ from django.urls import reverse
 import markdown
 from mdx_math import MathExtension
 
+class FriendLink(models.Model):
+    def __str__(self):
+        return self.name
+
+    url = models.CharField(max_length=120)
+    name = models.CharField(max_length=100)
+
 class Category(models.Model):
     def __str__(self):
         return self.name
