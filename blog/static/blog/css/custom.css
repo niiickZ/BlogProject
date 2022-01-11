@@ -202,6 +202,20 @@
     margin: 0;
 }
 
+#contact{
+    margin-top: 12px;
+}
+
+#about #contact img{
+    width: 32px;
+    height: 32px;
+    box-shadow: 2px 2px 4px rgb(100, 100, 100);
+}
+
+#about #contact a{
+    margin-right: 15px;
+}
+
 footer{
     padding: 0 0 20px 0;
     margin: 0;
