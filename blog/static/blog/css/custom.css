@@ -293,7 +293,7 @@ body{
     padding-right: 20px;
 }
 
-.paging-bar li a{
+.paging-bar li a, .paging-bar li span{
     font-size: 130%;
     color: black;
 }
