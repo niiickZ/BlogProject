@@ -9,24 +9,16 @@ import markdown
 from mdx_math import MathExtension
 import re
 
-# def index(request):
-#     post_list = Post.objects.all().order_by('-created_time')
-#     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 class IndexView(PaginationMixin, ListView):
     model = Post
     template_name = 'blog/index.html'
     context_object_name = 'post_list'
+    ordering = ['-created_time']
     paginate_by = 10
 
-    def get_queryset(self):
-        return super().get_queryset().order_by('-created_time')
 
 def detail(request, pk):
-    def change_formula(matched):
-        formula = matched.group(0)
-        return '\n<p>' + formula + '</p>\n'
-
     post = get_object_or_404(Post, pk=pk)
 
     # 增加文章阅读量
@@ -40,31 +32,35 @@ def detail(request, pk):
         'markdown.extensions.nl2br',
         MathExtension(enable_dollar_delimiter=True)
     ])
-    # post.body = re.sub(r'\$\$(.+?)\$\$', change_formula, post.body)
     post.body = md.convert(post.body)
 
-    # 文章摘要
+    # 文章目录
     m = re.search(r'<div class="toc">\s*<ul>(.*)</ul>\s*</div>', md.toc, re.S)
     post.toc = m.group(1) if m is not None else ''
 
     return render(request, 'blog/detail.html', context={'post': post})
 
-def archive(request, year, month):
-    post_list = Post.objects.filter(
-        created_time__year=year,
-        created_time__month=month
-    ).order_by('-created_time')
-    return render(request, 'blog/index.html', context={'post_list': post_list})
 
-def categories(request, pk):
-    c = get_object_or_404(Category, pk=pk)
-    post_list = Post.objects.filter(category=c).order_by('-created_time')
-    return render(request, 'blog/index.html', context={'post_list': post_list})
+class TagView(IndexView):
+    def get_queryset(self):
+        t = get_object_or_404(Tag, pk=self.kwargs['pk'])
+        return Post.objects.filter(tags=t).order_by('-created_time')
 
-def tags(request, pk):
-    t = get_object_or_404(Tag, pk=pk)
-    post_list = Post.objects.filter(tags=t).order_by('-created_time')
-    return render(request, 'blog/index.html', context={'post_list': post_list})
+
+class CategoryView(IndexView):
+    def get_queryset(self):
+        c = get_object_or_404(Category, pk=self.kwargs['pk'])
+        return Post.objects.filter(category=c).order_by('-created_time')
+
+
+class ArchiveView(IndexView):
+    def get_queryset(self):
+        post_list = Post.objects.filter(
+            created_time__year=self.kwargs['year'],
+            created_time__month=self.kwargs['month']
+        ).order_by('-created_time')
+        return post_list
+
 
 def search(request):
     q = request.GET.get('q')
@@ -82,3 +78,25 @@ def search(request):
         return redirect('blog:index')
 
     return render(request, 'blog/index.html', {'post_list': post_list})
+
+
+# def index(request):
+#     post_list = Post.objects.all().order_by('-created_time')
+#     return render(request, 'blog/index.html', context={'post_list': post_list})
+#
+# def archive(request, year, month):
+#     post_list = Post.objects.filter(
+#         created_time__year=year,
+#         created_time__month=month
+#     ).order_by('-created_time')
+#     return render(request, 'blog/index.html', context={'post_list': post_list})
+#
+# def categories(request, pk):
+#     c = get_object_or_404(Category, pk=pk)
+#     post_list = Post.objects.filter(category=c).order_by('-created_time')
+#     return render(request, 'blog/index.html', context={'post_list': post_list})
+#
+# def tags(request, pk):
+#     t = get_object_or_404(Tag, pk=pk)
+#     post_list = Post.objects.filter(tags=t).order_by('-created_time')
+#     return render(request, 'blog/index.html', context={'post_list': post_list})
