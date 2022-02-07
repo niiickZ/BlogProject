@@ -23,6 +23,8 @@
 
 .detail{
     padding: 30px 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .detail header{
@@ -50,7 +52,7 @@
 }
 
 .detail-content p{
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 .detail-content p img{
@@ -111,17 +113,9 @@
 }
 
 .read-more{
-    padding: 8px 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
     text-align: center;
 }
-
-.read-more a{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 8px 5px;
-}
-
 
 .paging-bar{
     text-align: center;
@@ -260,7 +254,7 @@ body{
 }
 
 .post, .detail, #content-aside > div{
-    background-color: rgba(238, 238, 238, 0.8);
+    background-color: rgba(238, 238, 238, 0.9);
 }
 
 .post{
@@ -280,6 +274,7 @@ body{
     font-size: 100%;
     letter-spacing: 1px;
     text-indent: 50px;
+    color: #1e1e1e;
 }
 
 .read-more{
@@ -352,4 +347,76 @@ body{
     text-align: center;
     letter-spacing: 1px;
     color: black;
+}
+
+.toggle-wrap {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-wrap:hover {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.toggle-wrap:hover div {
+    width: 120px;
+    height: 120px;
+}
+
+.toggle-button {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #3c3c3c;
+    box-shadow: -1px -1px 4px 2px rgba(0, 0, 0, 0.25);
+    background-clip: padding-box;
+    overflow: hidden;
+
+    -webkit-transition: width 300ms, height 300ms;
+    -moz-transition: width 300ms, height 300ms;
+    -ms-transition: width 300ms, height 300ms;
+    -o-transition: width 300ms, height 300ms;
+}
+
+.toggle-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 0 120px 120px 0;
+    border-style: solid;
+    border-color: #fff #8c8c8c;
+}
+
+.toggle-text {
+    font-size: 25px;
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+
+    text-align: center;
+    color: #fff;
+    line-height: 100%;
 }
