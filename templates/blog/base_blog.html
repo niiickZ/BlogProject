@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load blog_extras %}
+
+{% block main %}
+    <div class="row">
+        <main class="col-md-9" id="content-main">
+            {% block content_main %}
+            {% endblock content_main %}
+        </main>
+        <aside class="col-md-3" id="content-aside">
+            <div id="about">
+                <img src="{% static 'blog/img/avatar.png' %}" id="avatar">
+                <hr>
+                <div>
+                    <h3 id="my-name">Renns</h3>
+                    <p id="my-intro">
+                        ACMer, OIer <br>
+                        majored in CS at HITsz
+                    </p>
+                    <p id="contact">
+                        <a href="https://github.com/niiickZ" title="Github">
+                            <img src="https://inews.gtimg.com/newsapp_ls/0/14402097058/0.jpg">
+                        </a>
+                        <a href="mailto: niiick12848@163.com" title="niiick12848@163.com">
+                            <img src="https://inews.gtimg.com/newsapp_ls/0/14402091753/0.png">
+                        </a>
+                        <a href="https://blog.csdn.net/niiick" title="CSDN">
+                            <img src="https://p1.meituan.net/dpgroup/4203793aac5a57c02ab816cae1cef28a1221.jpg">
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            {% block toc %}
+            {% endblock toc %}
+
+            {% showArchives %}
+
+            <div id="search-box">
+                <h3>搜索</h3>
+                <form id="search-form" method="get" action="{% url 'blog:search' %}">
+                    <input type="search" id="search-input" name="q" required maxlength="40">
+                    <input type="submit" id="search-submit" value="搜索">
+                </form>
+            </div>
+
+            {% showCategories %}
+            {% showTags %}
+            {% showFriendlinks %}
+        </aside>
+    </div>
+{% endblock main %}

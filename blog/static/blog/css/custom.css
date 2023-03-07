@@ -21,55 +21,7 @@
     margin: 0;
 }
 
-.detail{
-    padding: 30px 0;
-    position: relative;
-    overflow: hidden;
-}
 
-.detail header{
-    margin: 0 0 25px 0;
-}
-
-.detail-content{
-    padding: 0 30px 0 30px;
-}
-
-.detail-content{
-    line-height: 30px;
-    letter-spacing: 1px;
-    font-size: 105%;
-}
-
-.detail .post-title{
-    font-weight: bold;
-}
-
-.detail-content h1, .detail-content h2, .detail-content h3, .detail-content h4, .detail-content h5{
-    font-family: "Microsoft Yahei", Serif;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-.detail-content p{
-    margin: 0 0 10px 0;
-}
-
-.detail-content p img{
-    display: block;
-    margin: 10px auto;
-    max-width: 85%;
-}
-
-.detail-content pre{
-    margin: 10px auto;
-}
-
-.detail blockquote{
-    font: 95% normal;
-    margin: 10px 0 10px 30px;
-    padding: 8px 15px;
-}
 
 .post{
     padding: 10px 15px;
@@ -249,7 +201,7 @@ body{
     text-decoration: none;
 }
 
-.post header, .detail header{
+.post header{
     text-align: center;
 }
 
@@ -259,15 +211,6 @@ body{
 
 .post{
     box-shadow: 3px 3px 5px #aaa;
-}
-
-.detail{
-    box-shadow: 1px 1px 5px #aaa;
-}
-
-.detail blockquote{
-    border-left: 5px solid rgba(160, 160, 160, 0.6);
-    background-color: rgba(220, 220, 220, 0.6);
 }
 
 .post-excerpt{

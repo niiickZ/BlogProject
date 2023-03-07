@@ -1,5 +1,5 @@
 asgiref==3.4.1
-Django==3.2.7
+Django==3.2.18
 django-pure-pagination==0.3.0
 importlib-metadata==4.8.1
 Markdown==3.3.4

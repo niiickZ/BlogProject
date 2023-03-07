@@ -1,5 +1,5 @@
-{% extends 'base.html' %}
-{% block main %}
+{% extends 'blog/base_blog.html' %}
+{% block content_main %}
     <article class="detail">
         <div class='toggle-wrap'>
             <div class='toggle-button'></div>
@@ -22,7 +22,7 @@
         </header>
         <div class="detail-content">{{ post.body|safe }}</div>
     </article>
-{% endblock main %}
+{% endblock content_main %}
 
 {% block toc %}
     {% if post.toc %}

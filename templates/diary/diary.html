@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block main %}
+    <article class="detail">
+        {% for diary in diary_list %}
+            <div class="detail-content">
+                <p><b>{{ diary.time }}</b></p>
+                {{ diary.content|safe }}
+            </div>
+        {% endfor %}
+    </article>
+{% endblock main %}

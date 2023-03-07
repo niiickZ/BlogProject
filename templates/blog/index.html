@@ -1,5 +1,5 @@
-{% extends 'base.html' %}
-{% block main %}
+{% extends 'blog/base_blog.html' %}
+{% block content_main %}
     {% for post in post_list %}
         <article class="post">
             <header>
@@ -54,4 +54,4 @@
             </ul>
         </div>
     {% endif %}
-{% endblock main %}
+{% endblock content_main %}
